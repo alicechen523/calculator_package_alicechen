@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "calculator_package_alicechen"
+version = "0.4.0"
+dependencies = [
+	"tqdm~=4.0", 
+]
+
+[project.scripts]
+calculator_package_alicechen = "calculator_package_alicechen.__main__:main"
+
+[project.optimal-dependencies]
+test = [
+	"pytest", "mypy", "types_tqdm", "ruff", "pre-commit", "tox",
+]
